@@ -17,7 +17,7 @@ export const Navbar = () => {
             </a>
           <ul className="hidden   text-xl font-bold md:flex gap-14">
             <li className=" hover:text-[#F8BBD0]"><a href="home">HOME</a></li>
-            <li className=" hover:text-[#F8BBD0]"><a href="#themed">THEMED</a></li>
+            <li className=" hover:text-[#F8BBD0]"><a href="themed">THEMED</a></li>
             <li className=" hover:text-[#F8BBD0]"><a href="pastries">PASTRIES</a></li>
             <li className=" hover:text-[#F8BBD0]"><a href="bread-desserts">BREAD/DESSERTS</a></li>
             <li className=" hover:text-[#F8BBD0]"><a href="beverages">BEVERAGES</a></li>

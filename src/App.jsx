@@ -9,6 +9,7 @@ import { BreadDesserts } from "./component/BreadDesserts";
 import { Beverages } from "./component/Beverages";
 import { OurIdentity } from "./component/OurIdentity";
 import { Reachout } from "./component/Reachout";
+import { ThemeCakes } from "./component/ThemeCakes";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/beverages" element={<Beverages />}/>
       <Route path="/our-identity" element={<OurIdentity />}/>
       <Route path="/reach-out" element={<Reachout />}/>
+      <Route path="/themed" element={<ThemeCakes />}/>
 
     </Routes>
     
