@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const CakeCards = ({ cake }) => {  // <-- Correctly receiving 'cake' prop
+const CakeCards = ({ cake }) => {  
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="p-4 Font-[Roboto] rounded-lg flex flex-col items-center">
+    <div className="p-4 transform transition-all duration-500 hover:scale-105 Font-[Roboto] rounded-lg flex flex-col items-center">
       <div className="w-full flex justify-center">
         <img 
-          src={cake.image}  // <-- Using 'cake' instead of undefined variable
+          src={cake.image} 
           alt={cake.name} 
           className="w-full h-78 rounded-t-2xl object-cover"
           style={{ background: "none" }}

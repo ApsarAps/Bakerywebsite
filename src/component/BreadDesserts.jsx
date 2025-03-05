@@ -12,8 +12,8 @@ import fruitCustard from "/src/assets/images/Fruit Custard (Easy Indian Dessert)
 import caramelCustard from "/src/assets/images/Caramel Custard Recipe.jpeg";
 import strawberryChocolate from "/src/assets/images/LONDON’S VIRAL CHOCOLATE STRAWBERRY - Bake with Shivesh.jpeg";
 import deliciousKheer from "/src/assets/images/Kheer (Authentic Indian Rice Pudding).jpeg";
-import { EnquiryForm } from './EnquiryForm';
-import { SearchBar } from './searchBar';
+import { EnquiryForm } from './pages/EnquiryForm';
+import { SearchBar } from './pages/SearchBar';
 
 
 
@@ -41,7 +41,7 @@ export const BreadDesserts = () => {
          
       <h2 className="text-center text-[#5D4037] underline text-3xl font-bold  mb-6">BREAD/BUN</h2>
       
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {pastries.map((pastry) => (
             <PastryCard key={pastry.id} pastry={pastry} />
         ))}

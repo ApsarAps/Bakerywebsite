@@ -21,8 +21,8 @@ import img9 from "../assets/images/41.jpeg";
 import img10 from "../assets/images/42.jpeg";
 import img11 from "../assets/images/24.jpeg";
 import img12 from "../assets/images/37.jpeg";
-import { EnquiryForm } from "./EnquiryForm";
-import { SearchBar } from "./searchBar";
+import { EnquiryForm } from "./pages/EnquiryForm";
+import { SearchBar } from "./pages/SearchBar";
 
 const cakeImages = [cake1, cake2, cake3, cake4, cake5, cake6,cake7,cake8,cake9];
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12];

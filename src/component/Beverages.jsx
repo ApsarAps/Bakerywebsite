@@ -12,8 +12,8 @@ import ketoMatchaGreenTea from "/src/assets/images/Delicious Keto Matcha Green T
 import classicMangoShake from "/src/assets/images/10.webp";
 import bobaBubbleTea from "/src/assets/images/Purple Boba Tea_ Flavor, Ingredients & Recipe!.jpeg";
 import PastryCard from './pastrycard';
-import { EnquiryForm } from './EnquiryForm';
-import { SearchBar } from './searchBar';
+import { EnquiryForm } from './pages/EnquiryForm';
+import { SearchBar } from './pages/SearchBar';
 
 const beverages = [
   { id: 1, name: "Caramel Hazelnut Iced Coffee", price: 160, image: caramelHazelnut },
@@ -38,7 +38,7 @@ export const Beverages = () => {
     <h2 className="text-center underline text-2xl md:text-3xl font-bold text-[#5D4037] mb-6">
       BEVERAGES
     </h2>
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {beverages.map((beverage) => (
         <PastryCard key={beverage.id} pastry={beverage} />
         

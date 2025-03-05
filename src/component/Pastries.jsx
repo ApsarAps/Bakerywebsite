@@ -13,8 +13,8 @@ import strawberryJar from "/src/assets/images/Red Velvet Cupcakes - The Perfect 
 import hazelnut from "/src/assets/images/images (1).jpeg";
 import redVelvetCupcake from "/src/assets/images/Red Velvet Cupcakes - The Perfect Valentine's Day Dessert Recipe.jpeg";
 import assortedCupcake from "/src/assets/images/15.jpeg";
-import { EnquiryForm } from "./EnquiryForm";
-import { SearchBar } from "./searchBar";
+import { EnquiryForm } from "./pages/EnquiryForm";
+import { SearchBar } from "./pages/SearchBar";
 
 const pastries = [
   { id: 1, name: "Rich Red Velvet Pastry", price: 150, image: redVelvet },
@@ -36,7 +36,7 @@ export const Pastries = () => {
     <div>
       <SearchBar />
       <h2 className="text-3xl text-[#5D4037] underline font-bold text-center mb-6"> PASTRIES</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
         {pastries.map((pastry) => (
           <PastryCard key={pastry.id} pastry={pastry} />
         

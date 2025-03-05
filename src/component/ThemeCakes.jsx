@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { SearchBar } from "./searchBar";
 import CakeCards from "./CakeCards"; 
 import expressTheme from "/src/assets/images/kit_kat_cake.jpg";
 import birthdayTheme from "/src/assets/images/Birthday_cakes.jpg";
@@ -7,7 +6,7 @@ import weddingTheme from "/src/assets/images/wedding.jpeg";
 import heartTheme from "/src/assets/images/21.jpeg";
 import girlsTheme from "/src/assets/images/19.jpeg";
 import boysTheme from "/src/assets/images/23.jpeg";
-
+import { FaSearch } from "react-icons/fa";
 import expressCake1 from "/src/assets/images/chocolate-truffle-cake-845926.jpg";
 import expressCake2 from "/src/assets/images/blasty_blueberry_1_5.jpg";
 import expressCake3 from "/src/assets/images/blackforest.jpg";
@@ -60,7 +59,10 @@ import heartcake5 from "/src/assets/images/Vintage Cake Toppers_ Add Charm and C
 import heartcake6 from "/src/assets/images/Pink Heart Cake.jpeg";
 import heartcake7 from "/src/assets/images/21.jpeg";
 import heartcake8 from "/src/assets/images/Heart Shape Anniversary Cakes Ideas __ New Valentine's Day cakes _ wedding cakes ideas.jpeg";
-
+import logo1 from"/src/assets/images/6021967-removebg-preview.png"
+import logo2 from"/src/assets/images/silver-star-five-points-design_88791-59.avif"
+import logo3 from"/src/assets/images/pngtree-vector-gold-star-with-circle-png-image_13064659-removebg-preview.png"
+import { EnquiryForm } from "./pages/EnquiryForm";
 
 
 const themes = [
@@ -151,40 +153,123 @@ const cakeData = {
   };
 export const ThemeCakes = () => {
   const [selectedCategory, setSelectedCategory] = useState("Express");
+       const [search, setSearch] = useState("");
+       const [showDiscounts, setShowDiscounts] = useState(false);
+
 
   return (
-    <div className="px-4">
-      <SearchBar />
-      <h1 className="text-3xl text-[#5D4037] text-center my-8 font-bold underline">THEME CAKES</h1>
+    <div className="px-4 py-8">
+      <div className="relative">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-4 w-full px-4">
+            <div className="relative flex-grow max-w-lg w-full">
+              <input
+                type="text"
+                placeholder="Search"
+                className="w-full bg-white text-lg md:text-xl font-bold p-3 pl-10 rounded-xl text-gray-400 border"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center">
-  {themes.map((theme) => (
-    <div
-      key={theme.name}
-      onClick={() => setSelectedCategory(theme.name)}
-      className="cursor-pointer transform transition-transform duration-300 hover:scale-110 text-center"
-    >
-      <img
-        src={theme.image}
-        alt={theme.name}
-        className="w-50 h-50 rounded-full object-cover  shadow-lg mx-auto"
-      />
-      <p className="font-semibold mt-1">{theme.name}</p>
-    </div>
-  ))}
-</div>
+            <button
+              className="bg-[#5D4037] hover:bg-[#F8BBD0] transition-all duration-400 ease-in-out hover:text-[#5D4037] font-semibold text-lg text-white px-6 py-3 rounded-2xl w-full md:w-auto"
+              onClick={() => setShowDiscounts(true)}
+            >
+              Discounts
+            </button>
+          </div>
+        </div>
 
+        {showDiscounts && (
+          <div className="fixed inset-0 flex items-center  justify-center z-50 p-4">
+            <div
+              className="relative w-full max-w-[700px]  bg-no-repeat bg-center bg-cover rounded-xl text-center shadow-2xl transform transition-all duration-500 ease-out scale-100 p-4 sm:p-6 md:p-8"
+              style={{
+                backgroundImage: "url('/src/assets/images/breads-pastries-christmas-cake-wooden-background-heart-picture-bakery-shop-valentines-day-65833657.webp')",
+              }}
+            >
+              <div className="absolute  inset-0 bg-[#F8BBD0] opacity-60 rounded-xl"></div>
+              <div className="relative z-10">
+                <div className="bg-[#5D4037] text-white rounded-xl p-3 mb-4">
+                  <div className="flex flex-col  sm:flex-row items-center justify-between gap-4">
+                    <img src="" alt="logo" className="w-12 h-12 sm:w-16 sm:h-16" />
+                    <h2 className="text-white font-bold text-lg sm:text-lg text-center">
+                      GET 100 ADDITIONAL POINTS ON YOUR FIRST ONLINE ORDER.
+                    </h2>
+                  </div>
+                  <p className="text-md sm:text-md font-semibold mt-2">
+                    Now earn Points on every order and use them on your next one.
+                  </p>
+                  <h2 className="text-md sm:text-md font-bold mt-2">1 Point = 1 Rupee</h2>
+                </div>
 
-      <h2 className="text-3xl text-[#5D4037] text-center font-bold underline mt-6">{selectedCategory} Cakes</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                  <div className="bg-[#5D4037] sm:p-2 text-white p-4 rounded-xl flex flex-col items-center">
+                    <img src={logo1} alt="Welcome Gift" className="w-14 h-14 sm:w-16 sm:h-16 mb-2" />
+                    <p className="font-bold text-lg underline">Welcome Gift</p>
+                    <p className="text-sm sm:text-base text-center">Get 100 Points on your first order</p>
+                  </div>
 
+                  <div className="bg-[#5D4037] text-white  p-4 rounded-xl flex flex-col items-center">
+                    <img src={logo2} alt="Vanilla" className="w-14 h-14 sm:w-16 sm:h-16 rounded-full mb-2" />
+                    <p className="font-bold text-lg underline">Vanilla</p>
+                    <p className="text-sm sm:text-base text-center">Get Points worth 10% of your order amount</p>
+                    <p className="text-sm sm:text-base text-center">Applicable for <strong>1st to 8th order</strong></p>
+                  </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
-        {cakeData[selectedCategory]?.length > 0 ? (
-          cakeData[selectedCategory].map((cake) => <CakeCards key={cake.id} cake={cake} />)
-        ) : (
-          <p className="text-center col-span-3 font-semibold text-lg">No cakes available.</p>
+                  <div className="bg-[#5D4037] text-white p-4 rounded-xl flex flex-col items-center">
+                    <img src={logo3} alt="Saffron" className="w-14 h-14 sm:w-16 sm:h-16 mb-2" />
+                    <p className="font-bold text-lg underline">Saffron</p>
+                    <p className="text-sm sm:text-base text-center">Get Points worth <strong>20%</strong> of your order</p>
+                    <p className="text-sm sm:text-base text-center">Applicable for <strong>9th order and onwards</strong></p>
+                  </div>
+                </div>
+
+                <div className="mt-4 bg-[#5D4037] text-white p-3 rounded-xl font-semibold text-center">
+                  GET 10 Points (whenever you submit a feedback)
+                </div>
+
+                <button className="mt-4 text-black font-bold underline text-lg" onClick={() => setShowDiscounts(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
         )}
+
+        <h1 className="text-3xl text-[#5D4037] text-center my-8 font-bold underline">THEME CAKES</h1>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 justify-center">
+          {themes.map((theme) => (
+            <div
+              key={theme.name}
+              onClick={() => setSelectedCategory(theme.name)}
+              className="cursor-pointer transform transition-transform duration-300 hover:scale-110 text-center"
+            >
+              <img
+                src={theme.image}
+                alt={theme.name}
+                className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg mx-auto"
+              />
+              <p className="font-semibold mt-1">{theme.name}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-3xl text-[#5D4037] text-center font-bold underline mt-6">{selectedCategory} Cakes</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6">
+          {cakeData[selectedCategory]?.length > 0 ? (
+            cakeData[selectedCategory].map((cake) => <CakeCards key={cake.id} cake={cake} />)
+          ) : (
+            <p className="text-center col-span-3 font-semibold text-lg">No cakes available.</p>
+          )}
+        </div>
       </div>
+      <EnquiryForm />
+   
     </div>
   );
 };

@@ -1,23 +1,26 @@
 
 import React from "react";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
-import { Footer } from "./component/Footer";
+
 import Home from "./component/Home";
-import { Navbar } from "./component/Navbar";
+
 import { Pastries } from "./component/Pastries";
 import { BreadDesserts } from "./component/BreadDesserts";
 import { Beverages } from "./component/Beverages";
 import { OurIdentity } from "./component/OurIdentity";
 import { Reachout } from "./component/Reachout";
 import { ThemeCakes } from "./component/ThemeCakes";
+import { Footer } from "./component/pages/Footer";
+import { Navbar } from "./component/pages/Navbar";
+
 
 
 function App() {
 
   return (
     <>
-    <Router basename="/bakery">
-    <Navbar/>
+    <Router >
+    <Navbar />
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/home" element={<Home />}/>
@@ -30,7 +33,7 @@ function App() {
 
     </Routes>
     
-    <Footer/>
+    <Footer />
     </Router>
     
     </>
