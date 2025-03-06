@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"; 
 import { FaSearch } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -27,14 +28,12 @@ export const SearchBar = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-          <a href="themed">
-            <button className="bg-[#5D4037] hover:bg-[#F8BBD0] transition-all duration-400 ease-in-out hover:text-[#5D4037] font-semibold text-lg text-white px-6 py-3 rounded-2xl w-full md:w-auto">
+         <Link to="/themed" className="hover:text-[#F8BBD0]  "> <button className="bg-[#5D4037] hover:bg-[#F8BBD0] transition-all duration-400 ease-in-out  cursor-pointer hover:text-[#5D4037] font-semibold text-lg text-white px-6 py-3 rounded-2xl w-full md:w-auto">
               ORDER NOW
-            </button>
-          </a>
+            </button> </Link>
           
           <button 
-            className="bg-[#5D4037] transition-all duration-300 ease-in-out hover:bg-[#F8BBD0] hover:text-[#5D4037] font-semibold text-lg text-white px-6 py-3 rounded-2xl w-full md:w-auto transform hover:scale-105 active:scale-95"
+            className="bg-[#5D4037] transition-all duration-300 cursor-pointer  ease-in-out hover:bg-[#F8BBD0] hover:text-[#5D4037] font-semibold text-lg text-white px-6 py-3 rounded-2xl w-full md:w-auto transform hover:scale-105 active:scale-95"
             onClick={() => setIsModalOpen(true)}
           >
             LOGIN/SIGN UP

@@ -40,7 +40,7 @@ const CakeCards = ({ cake }) => {
         </div>
         <p className="text-sm text-gray-500 italic mt-1">Price varies as per KG</p>  
         <p className="text-xl font-bold mt-2">₹{cake.price}.00</p>
-        <button className="mt-2 transition-all duration-400 ease-in-out hover:bg-[#F8BBD0] hover:text-[#5D4037] px-4 font-bold bg-[#5D4037] text-[#F8BBD0] py-2 rounded-md">
+        <button className="mt-2  cursor-pointer transition-all duration-400 ease-in-out hover:bg-[#F8BBD0] hover:text-[#5D4037] px-4 font-bold bg-[#5D4037] text-[#F8BBD0] py-2 rounded-md">
           ADD TO CART
         </button>
       </div>

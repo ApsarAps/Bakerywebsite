@@ -55,7 +55,7 @@ export const Reachout = () => {
                 className="p-4 font-bold text-2xl bg-white border-1  rounded-xl h-40"
               ></textarea>
               <div className='text-center bg-none'>
-              <button className="bg-[#5D4037]  font-bold text-2xl  hover:bg-[#F8BBD0]  transition-all duration-400 ease-in-out hover:text-[#5D4037]  text-white px-10 py-3 rounded-2xl">
+              <button className="bg-[#5D4037]  cursor-pointer font-bold text-2xl  hover:bg-[#F8BBD0]  transition-all duration-400 ease-in-out hover:text-[#5D4037]  text-white px-10 py-3 rounded-2xl">
                 SEND IN
               </button>
               </div>

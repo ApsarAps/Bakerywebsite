@@ -37,7 +37,7 @@ export const EnquiryForm = () => {
       </div>
     </div>
   
-    <button className="block bg-[#5D4037] transition-all duration-400 ease-in-out hover:bg-[#F8BBD0] hover:text-[#5D4037]  text-white px-6 py-2 text-2xl rounded-2xl mt-6 mx-auto font-bold">
+    <button className="block bg-[#5D4037] transition-all duration-400 ease-in-out  cursor-pointer hover:bg-[#F8BBD0] hover:text-[#5D4037]  text-white px-6 py-2 text-2xl rounded-2xl mt-6 mx-auto font-bold">
       CONVEY US
     </button>
   </div>
