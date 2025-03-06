@@ -15,13 +15,13 @@ export const Navbar = () => {
       </a>
 
       <ul className="hidden md:flex  text-lg font-bold gap-12">
-        <li className="hover:text-[#F8BBD0]"><a href="home">HOME</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="themed">THEMED</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="pastries">PASTRIES</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="bread-desserts">BREAD/DESSERTS</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="beverages">BEVERAGES</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="our-identity">OUR IDENTITY</a></li>
-        <li className="hover:text-[#F8BBD0]"><a href="reach-out">REACH OUT</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/home">HOME</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/themed">THEMED</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/pastries">PASTRIES</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/bread-desserts">BREAD/DESSERTS</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/beverages">BEVERAGES</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/our-identity">OUR IDENTITY</a></li>
+        <li className="hover:text-[#F8BBD0]"><a href="/#/reach-out">REACH OUT</a></li>
       </ul>
 
     

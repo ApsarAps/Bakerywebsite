@@ -62,6 +62,7 @@ import heartcake8 from "/src/assets/images/Heart Shape Anniversary Cakes Ideas _
 import logo1 from"/src/assets/images/6021967-removebg-preview.png"
 import logo2 from"/src/assets/images/silver-star-five-points-design_88791-59.avif"
 import logo3 from"/src/assets/images/pngtree-vector-gold-star-with-circle-png-image_13064659-removebg-preview.png"
+import breadPastriesImage from "/src/assets/images/breads-pastries-christmas-cake-wooden-background-heart-picture-bakery-shop-valentines-day-65833657.webp";
 import { EnquiryForm } from "./pages/EnquiryForm";
 
 
@@ -187,7 +188,7 @@ export const ThemeCakes = () => {
             <div
               className="relative w-full max-w-[700px]  bg-no-repeat bg-center bg-cover rounded-xl text-center shadow-2xl transform transition-all duration-500 ease-out scale-100 p-4 sm:p-6 md:p-8"
               style={{
-                backgroundImage: "url('/src/assets/images/breads-pastries-christmas-cake-wooden-background-heart-picture-bakery-shop-valentines-day-65833657.webp')",
+                backgroundImage: `url(${breadPastriesImage})`,
               }}
             >
               <div className="absolute  inset-0 bg-[#F8BBD0] opacity-60 rounded-xl"></div>

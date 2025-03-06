@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaSearch } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import Email from "/src/assets/images/email-vector-icon-260nw-319044695-removebg-preview.png"
-import Name from "/src/assets/images/images__4_-removebg-preview.png"
 import Contact from "/src/assets/images/images__5_-removebg-preview.png"
 import Password from "/src/assets/images/png-clipart-password-computer-icons-security-safety-icon-safety-icon-child-safety-lock-thumbnail-removebg-preview.png"
 
@@ -51,20 +52,20 @@ export const SearchBar = () => {
           
           <form className="space-y-4">
             <div className="flex items-center bg-white px-2 py-2 rounded-xl">
-             <img src={Name} className='w-full border-1 border-black max-w-6' alt="" />
-              <input type="text" placeholder="Name" className="w-full outline-none text-gray-700" />
+            <FontAwesomeIcon className='mr-3 w-full max-w-6' icon={faUser} />
+              <input type="text" placeholder="Name" className="w-full font-bold outline-none text-gray-700" />
             </div>
             <div className="flex items-center bg-white px-2 py-2 rounded-xl">
-            <img src={Email} className='w-full max-w-6' alt="" />
-              <input type="email" placeholder="Email" className="w-full outline-none text-gray-700" />
+            <img src={Email} className='w-full max-w-6 mr-3' alt="" />
+              <input type="email" placeholder="Email" className="w-full font-bold outline-none text-gray-700" />
             </div>
             <div className="flex items-center bg-white px-2 py-2 rounded-xl">
-            <img src={Contact} className='w-full max-w-6' alt="" />
-              <input type="text" placeholder="Mobile" className="w-full outline-none text-gray-700" />
+            <img src={Contact} className='w-full max-w-6 mr-3' alt="" />
+              <input type="text" placeholder="Mobile" className="w-full font-bold outline-none text-gray-700" />
             </div>
             <div className="flex items-center bg-white px-2 py-2 rounded-xl">
-            <img src={Password} className='w-full max-w-6' alt="" />
-              <input type="password" placeholder="Password" className="w-full outline-none text-gray-700" />
+            <img src={Password} className='w-full max-w-6 mr-3' alt="" />
+              <input type="password" placeholder="Password" className="w-full font-bold outline-none text-gray-700" />
             </div>
             
             <button type="submit" className="bg-[#F8BBD0] text-[#5D4037] font-bold px-4 py-2 rounded-2xl mt-4">

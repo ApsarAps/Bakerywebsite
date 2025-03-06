@@ -1,9 +1,7 @@
 
 import React from "react";
-import { HashRouter as Router,Routes,Route } from "react-router-dom";
-
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./component/Home";
-
 import { Pastries } from "./component/Pastries";
 import { BreadDesserts } from "./component/BreadDesserts";
 import { Beverages } from "./component/Beverages";
@@ -15,11 +13,12 @@ import { Navbar } from "./component/pages/Navbar";
 
 
 
+
 function App() {
 
   return (
-    <>
-    <Router >
+    <HashRouter >
+
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />}/>
@@ -34,9 +33,9 @@ function App() {
     </Routes>
     
     <Footer />
-    </Router>
+    </HashRouter>
     
-    </>
+  
   )
 }
 
