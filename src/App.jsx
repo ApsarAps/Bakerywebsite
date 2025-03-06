@@ -17,8 +17,8 @@ import { Navbar } from "./component/pages/Navbar";
 function App() {
 
   return (
-    <HashRouter >
 
+    <>
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />}/>
@@ -33,7 +33,7 @@ function App() {
     </Routes>
     
     <Footer />
-    </HashRouter>
+    </>
     
   
   )
